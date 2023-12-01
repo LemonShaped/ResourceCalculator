@@ -1,0 +1,442 @@
+
+index_page_display_name: "Assembly Line 2"
+
+
+recipe_types:
+  Furnace: "{IN_ITEMS} > Furnace > {OUT_ITEM}"
+  Cutter: "{IN_ITEMS} > Cutter > {OUT_ITEM}"
+  Hydraulic Press: "{IN_ITEMS} > Hydraulic Press > {OUT_ITEM}"
+  Wire Maker: "{IN_ITEMS} > Wire Maker > {OUT_ITEM}"
+  Cable Maker: "{IN_ITEMS} > Cable Maker > {OUT_ITEM}"
+  Crafter MK1: "{IN_ITEMS} > Crafter MK1 > {OUT_ITEM}"
+  Crafter MK2: "{IN_ITEMS} > Crafter MK2 > {OUT_ITEM}"
+  Crafter MK3: "{IN_ITEMS} > Crafter MK3 > {OUT_ITEM}"
+
+
+resources:
+  
+## main recipes:
+  
+  Circuit:
+    recipes:
+    - recipe_type: Crafter MK1
+      output: 1
+      requirements:
+        Copper Wire: -1
+        Gold: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Circuit: 0
+  
+  Server Rack:
+    recipes:
+    - recipe_type: Crafter MK1
+      output: 1
+      requirements:
+        Aluminium: -1
+        Iron: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Server Rack: 0
+  
+  
+  Processor:
+    recipes:
+    - recipe_type: Crafter MK2
+      output: 1
+      requirements:
+        Circuit: -1
+        Gold Liquid: -3
+        Diamond Wire: -3
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Processor: 0
+  
+  Power Supply:
+    recipes:
+    - recipe_type: Crafter MK2
+      output: 1
+      requirements:
+        Circuit: -1
+        Diamond: -6
+        Aluminium Liquid: -3
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Power Supply: 0
+  
+  Fan:
+    recipes:
+    - recipe_type: Crafter MK2
+      output: 1
+      requirements:
+        Circuit: -1
+        Diamond Gear: -3
+        Aluminium: -6
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Fan: 0
+  
+  Computer:
+    recipes:
+    - recipe_type: Crafter MK2
+      output: 1
+      requirements:
+        Fan: -1
+        Power Supply: -1
+        Processor: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Computer: 0
+  
+  
+  Super Computer:
+    recipes:
+    - recipe_type: Crafter MK3
+      output: 1
+      requirements:
+        Computer: -2
+        Server Rack: -1
+        Circuit: -3
+        Gold Cable: -3
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Super Computer: 0
+  
+  AI Processor:
+    recipes:
+    - recipe_type: Crafter MK3
+      output: 1
+      requirements:
+        Circuit: -10
+        Super Computer: -1
+        Copper Plate: -6
+        Copper Cable: -4
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        AI Processor: 0
+
+
+
+# base materials:
+
+  Aluminium:
+    recipes:
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Aluminium: 0
+  Copper:
+    recipes:
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Copper: 0
+  Diamond:
+    recipes:
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Diamond: 0
+  Gold:
+    recipes:
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Gold: 0
+  Iron:
+    recipes:
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Iron: 0
+
+# basic resources:
+
+  Aluminium Liquid:
+    recipes:
+    - recipe_type: Furnace
+      output: 1
+      requirements:
+        Aluminium: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Aluminium Liquid: 0
+
+  Copper Liquid:
+    recipes:
+    - recipe_type: Furnace
+      output: 1
+      requirements:
+        Copper: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Copper Liquid: 0
+
+  Diamond Liquid:
+    recipes:
+    - recipe_type: Furnace
+      output: 1
+      requirements:
+        Diamond: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Diamond Liquid: 0
+
+  Gold Liquid:
+    recipes:
+    - recipe_type: Furnace
+      output: 1
+      requirements:
+        Gold: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Gold Liquid: 0
+
+  Iron Liquid:
+    recipes:
+    - recipe_type: Furnace
+      output: 1
+      requirements:
+        Iron: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Iron Liquid: 0
+
+
+  Aluminium Gear:
+    recipes:
+    - recipe_type: Cutter
+      output: 1
+      requirements:
+        Aluminium: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Aluminium Gear: 0
+
+  Copper Gear:
+    recipes:
+    - recipe_type: Cutter
+      output: 1
+      requirements:
+        Copper: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Copper Gear: 0
+
+  Diamond Gear:
+    recipes:
+    - recipe_type: Cutter
+      output: 1
+      requirements:
+        Diamond: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Diamond Gear: 0
+
+  Gold Gear:
+    recipes:
+    - recipe_type: Cutter
+      output: 1
+      requirements:
+        Gold: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Gold Gear: 0
+
+  Iron Gear:
+    recipes:
+    - recipe_type: Cutter
+      output: 1
+      requirements:
+        Iron: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Iron Gear: 0
+
+
+  Aluminium Plate:
+    recipes:
+    - recipe_type: Hydraulic Press
+      output: 1
+      requirements:
+        Aluminium: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Aluminium Plate: 0
+
+  Copper Plate:
+    recipes:
+    - recipe_type: Hydraulic Press
+      output: 1
+      requirements:
+        Copper: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Copper Plate: 0
+
+  Diamond Plate:
+    recipes:
+    - recipe_type: Hydraulic Press
+      output: 1
+      requirements:
+        Diamond: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Diamond Plate: 0
+
+  Gold Plate:
+    recipes:
+    - recipe_type: Hydraulic Press
+      output: 1
+      requirements:
+        Gold: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Gold Plate: 0
+
+  Iron Plate:
+    recipes:
+    - recipe_type: Hydraulic Press
+      output: 1
+      requirements:
+        Iron: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Iron Plate: 0
+
+
+  Aluminium Wire:
+    recipes:
+    - recipe_type: Wire Maker
+      output: 1
+      requirements:
+        Aluminium: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Aluminium Wire: 0
+
+  Copper Wire:
+    recipes:
+    - recipe_type: Wire Maker
+      output: 1
+      requirements:
+        Copper: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Copper Wire: 0
+
+  Diamond Wire:
+    recipes:
+    - recipe_type: Wire Maker
+      output: 1
+      requirements:
+        Diamond: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Diamond Wire: 0
+
+  Gold Wire:
+    recipes:
+    - recipe_type: Wire Maker
+      output: 1
+      requirements:
+        Gold: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Gold Wire: 0
+
+  Iron Wire:
+    recipes:
+    - recipe_type: Wire Maker
+      output: 1
+      requirements:
+        Iron: -1
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Iron Wire: 0
+
+#special basic recipes:
+
+  Aluminium Cable:
+    recipes:
+    - recipe_type: Cable Maker
+      output: 1
+      requirements:
+        Aluminium Wire: -3
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Aluminium Cable: 0
+
+  Copper Cable:
+    recipes:
+    - recipe_type: Cable Maker
+      output: 1
+      requirements:
+        Copper Wire: -3
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Copper Cable: 0
+
+  Diamond Cable:
+    recipes:
+    - recipe_type: Cable Maker
+      output: 1
+      requirements:
+        Diamond Wire: -3
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Diamond Cable: 0
+
+  Gold Cable:
+    recipes:
+    - recipe_type: Cable Maker
+      output: 1
+      requirements:
+        Gold Wire: -3
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Gold Cable: 0
+
+  Iron Cable:
+    recipes:
+    - recipe_type: Cable Maker
+      output: 1
+      requirements:
+        Iron Wire: -3
+    - recipe_type: Raw Resource
+      output: 1
+      requirements:
+        Iron Cable: 0
+
